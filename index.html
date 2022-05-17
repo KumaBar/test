@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="form">
+      <div class="form-left">
+
+        <div class="form-item">
+          <div class="select-box" data-id="s1" onClick="getSelectid(this.dataset.id)">
+            <span>Цель кредита</span>
+            <div class="options-container">
+              <div class="option">
+                <input type="radio" class="radio" id="cred1" name="category" />
+                <label class="radio-l" for="cred1">1 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="cred2" name="category" />
+                <label class="radio-l" for="cred2">2 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="cred3" name="category" />
+                <label class="radio-l" for="cred3">3 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="cred4" name="category" />
+                <label class="radio-l" for="cred4">4 вариант</label>
+              </div>
+            </div>
+
+            <div class="selected">
+              1 вариант
+            </div>
+          </div>
+        </div>
+
+        <div class="form-item">
+          <div class="form-item-radio">
+            <div class="radio-option">
+              <input id="radioInput1" value="18" type="radio" name="hand" class="radio-input" checked="checked">
+              <label tabindex="2" for="radioInput1" class="radio-label"
+                onclick="animateValue('rate', 18.6); monthPayment('radioInput1')" data-value="18.6"><span>Базовая
+                  программа
+                  от 18.6%</span></label>
+            </div>
+            <div class="radio-option">
+              <input id="radioInput2" value="1.7" type="radio" name="hand" class="radio-input">
+              <label tabindex="3" for="radioInput2" class="radio-label"
+                onclick="animateValue('rate',0.1); monthPayment('radioInput2')" data-value="0.1"><span>Дальневосточная
+                  ипотека
+                  от
+                  0.1%</span></label>
+            </div>
+            <div class="radio-option">
+              <input id="radioInput3" value="17.9" type="radio" name="hand" class="radio-input">
+              <label tabindex="4" for="radioInput3" class="radio-label"
+                onclick="animateValue('rate', 17.9); monthPayment('radioInput3')" data-value="17.9"><span>Военная
+                  ипотека от
+                  17.9%</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-item">
+          <div class="select-box" data-id="s2" onClick="getSelectid(this.dataset.id)">
+            <span>Регион покупки недвижимости</span>
+            <div class="options-container">
+              <div class="option">
+                <input type="radio" class="radio" id="reg1" name="category" />
+                <label class="radio-l" for="reg1">1 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="reg2" name="category" />
+                <label class="radio-l" for="reg2">2 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="reg3" name="category" />
+                <label class="radio-l" for="reg3">3 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="reg4" name="category" />
+                <label class="radio-l" for="reg4">4 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="reg5" name="category" />
+                <label class="radio-l" for="reg5">5 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="reg6" name="category" />
+                <label class="radio-l" for="reg6">6 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="reg7" name="category" />
+                <label class="radio-l" for="reg7">7 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="reg8" name="category" />
+                <label class="radio-l" for="reg8">8 вариант</label>
+              </div>
+
+              <div class="option">
+                <input type="radio" class="radio" id="reg9" name="category" />
+                <label class="radio-l" for="reg9">9 вариант</label>
+              </div>
+            </div>
+
+            <div class="selected">
+              1 вариант
+            </div>
+          </div>
+        </div>
+
+        <div class="form-item">
+          <div class="form-item-switch">
+            <div class="switch-text">Есть карта</div>
+            <label class="switch">
+              <input tabindex="6" type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-item form-item-text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed consectetur rem pariatur, unde praesentium
+            dolorum aspernatur exercitationem adipisci amet perferendis possimus totam perspiciatis odit laboriosam
+            deserunt quod! Aliquid, rem ratione.
+          </p>
+          <div class="close">
+            <img src="img/close.svg" alt="">
+          </div>
+        </div>
+
+        <div class="form-item">
+          <div class="range">
+            <div class="range-text">
+              <label class="range-label">Стоимость недвижимости</label>
+              <input type="number" id="i1" data-id="1" oninput="readInput(this.value,this.dataset.id)" value="3350000">
+            </div>
+            <input id="r1" data-id="1" class="range-input" type="range" min="335000" max="100000000" step="1" value="0"
+              oninput="readRange(this.value,this.dataset.id)">
+            <div class="range-numbers">
+              <div>335 тыс. ₽</div>
+              <div>100 млн. ₽</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-item">
+          <div class="form-item-switch">
+            <p>Использовать мат. капитал?</p>
+            <label class="switch">
+              <input tabindex="8" type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-item">
+          <div class="range">
+            <div class="range-text">
+              <label class="range-label">Первоначальнй взнос</label>
+              <input type="number" id="i2" data-id="2" oninput="readInput(this.value,dataset.id)" value="1100000">
+            </div>
+            <input id="r2" data-id="2" class="range-input" type="range" min="1100000" max="100000000" step="1" value="0"
+              oninput="readRange(this.value,this.dataset.id)">
+            <div class="range-numbers">
+              <div id="min">1.1 тыс. ₽</div>
+              <div id="max">100 тыс. ₽</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-item">
+          <div class="range">
+            <div class="range-text">
+              <label class="range-label">Срок кредита</label>
+              <input type="number" id="i3" data-id="3" oninput="readInput(this.value,dataset.id)" value="1">
+            </div>
+            <input id="r3" data-id="3" class="range-input" type="range" min="1" max="30" step="1" value="0"
+              oninput="readRange(this.value,dataset.id)">
+            <div class="range-numbers">
+              <div>1 год</div>
+              <div>30 лет</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-right ">
+        <div class="info">
+          <div class="info-left">
+            <div class="info-item">
+              <label>Ежемесячный платеж</label>
+              <span class="info-item-value" id="month"> 10050 </span>
+            </div>
+            <div class="info-item">
+              <label>Сумма кредита</label>
+              <span class="info-item-value" id="credit"> 670000 </span>
+            </div>
+          </div>
+
+          <div class="info-right">
+            <div class="info-item">
+              <label>Процентная ставка</label>
+              <span class="info-item-value" id="rate"> 18.6 %</span>
+            </div>
+            <div class="info-item">
+              <label>Налоговый вычет</label>
+              <span class="info-item-value" id="taxes"> 87100 </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-buttons">
+          <button class="button-plan">График платежей</button>
+          <button class="button-go">Перейти к подаче заявки</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
